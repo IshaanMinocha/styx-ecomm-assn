@@ -24,6 +24,12 @@ const userSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
+    orders: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Order'
+        }
+    ],
 },
     {
         collection: "User",
