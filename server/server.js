@@ -4,6 +4,7 @@ import connectDb from './config/db.js';
 import cors from 'cors';
 import { errorHandler, notFound } from './middlewares/ErrorMiddleware.js';
 import userRoutes from './routes/UserRoute.js';
+import productRoutes from './routes/ProductRoute.js';
 
 envConfig();
 
@@ -15,6 +16,7 @@ server.use(cors({ origin: '*' }));
 server.use(express.json());
 
 server.use('/api/users', userRoutes);
+server.use('/api/products', productRoutes);
 
 server.use(notFound);
 server.use(errorHandler);
