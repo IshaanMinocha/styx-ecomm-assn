@@ -5,6 +5,7 @@ import cors from 'cors';
 import { errorHandler, notFound } from './middlewares/ErrorMiddleware.js';
 import userRoutes from './routes/UserRoute.js';
 import productRoutes from './routes/ProductRoute.js';
+import orderRoutes from './routes/OrderRoute.js';
 
 envConfig();
 
@@ -17,6 +18,7 @@ server.use(express.json());
 
 server.use('/api/users', userRoutes);
 server.use('/api/products', productRoutes);
+server.use('/api/orders', orderRoutes);
 
 server.use(notFound);
 server.use(errorHandler);
