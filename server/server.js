@@ -2,6 +2,8 @@ import express from 'express';
 import envConfig from './config/dotenv.js';
 import connectDb from './config/db.js';
 import cors from 'cors';
+import { errorHandler, notFound } from './middlewares/ErrorMiddleware.js';
+import userRoutes from './routes/UserRoute.js';
 
 envConfig();
 
@@ -9,10 +11,13 @@ const server = express();
 
 const port = process.env.PORT || 8000;
 
-server.use(cors({
-    origin: '*'
-}));
+server.use(cors({ origin: '*' }));
 server.use(express.json());
+
+server.use('/api/users', userRoutes);
+
+server.use(notFound);
+server.use(errorHandler);
 
 const startServer = async () => {
     try {
@@ -27,6 +32,6 @@ const startServer = async () => {
 
 startServer();
 
-server.get('/', (req,res) => {
+server.get('/', (req, res) => {
     res.send("Server Started!")
 })
