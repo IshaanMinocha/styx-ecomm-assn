@@ -7,7 +7,7 @@ import WhatsappIcon from "./components/WhatsappIcon";
 import About from "./pages/About";
 import Support from "./pages/Support";
 import Cart from "./pages/Cart";
-import Shop from "./pages/Shop";
+import Shop from "./pages/ProductList";
 import Auth from "./pages/Auth";
 
 function App() {
