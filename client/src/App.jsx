@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Support from "./pages/Support";
 import Cart from "./pages/Cart";
 import Shop from "./pages/Shop";
+import Auth from "./pages/Auth";
 
 function App() {
   return (
@@ -50,6 +51,12 @@ function App() {
             <WhatsappIcon />
             <Shop />
             <BackToTop />
+          </>
+        } />
+        <Route path="/auth" element={
+          <>
+            <Navbar />
+            <Auth />
           </>
         } />
         <Route path="*" element={<Navigate to="/404" />} />

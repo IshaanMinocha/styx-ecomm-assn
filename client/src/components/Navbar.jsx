@@ -5,6 +5,7 @@ import {
   FiPhone,
   FiHome,
   FiInfo,
+  FiUser,
 } from "react-icons/fi";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
@@ -28,6 +29,7 @@ const Navbar = () => {
               </span>
             )}
           </div>
+            <Link text="Login" Icon={FiUser} href={"/auth"} />
         </div>
       </motion.nav>
     </div>
