@@ -16,6 +16,10 @@ const port = process.env.PORT || 8000;
 server.use(cors({ origin: '*' }));
 server.use(express.json());
 
+server.get('/', (req, res) => {
+    res.send("Server Started!")
+})
+
 server.use('/api/users', userRoutes);
 server.use('/api/products', productRoutes);
 server.use('/api/orders', orderRoutes);
@@ -35,7 +39,3 @@ const startServer = async () => {
 };
 
 startServer();
-
-server.get('/', (req, res) => {
-    res.send("Server Started!")
-})
