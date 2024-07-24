@@ -43,7 +43,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative overflow-hidden bg-neutral-950 h-[70vh]">
+    <div className="relative overflow-hidden bg-neutral-950 h-[90vh]">
       <motion.div
         drag="x"
         dragConstraints={{ left: 0, right: 0 }}

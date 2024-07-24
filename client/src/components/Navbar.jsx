@@ -2,9 +2,7 @@ import { motion } from "framer-motion";
 import {
   FiShoppingCart,
   FiSearch,
-  FiPhone,
   FiHome,
-  FiInfo,
   FiUser,
 } from "react-icons/fi";
 import { useSelector } from "react-redux";
@@ -14,13 +12,11 @@ const Navbar = () => {
   const { cartItems } = useSelector((state) => state.cart);
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-light h-20 shadow-lg z-50">
+    <div className="fixed bottom-0 left-0 right-0 bg-light shadow-lg z-50 h-[10vh]">
       <motion.nav className="bg-light text-dark shadow-lg flex items-center justify-center h-full">
         <div className="flex gap-6 px-6">
           <Link text="Home" Icon={FiHome} href={"/"} />
-          <Link text="About" Icon={FiInfo} href={"/about"} />
           <Link text="Shop" Icon={FiSearch} href={"/shop"} />
-          <Link text="Support" Icon={FiPhone} href={"/support"} />
           <div className="relative">
             <Link text="Cart" Icon={FiShoppingCart} href={"/cart"} />
             {cartItems.length > 0 && (

@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 
 const Side1 = () => {
     return (
-        <section className="relative z-0 overflow-hidden h-[70vh] bg-center bg-no-repeat bg-[url('/bg.webp')] bg-cover bg-primary bg-blend-multiply">
+        <section className="relative z-0 overflow-hidden bg-opacity-50 h-[90vh] bg-center bg-no-repeat bg-[url('/bg.jpg')] bg-cover bg-primary bg-blend-multiply">
             <div className="relative z-20 mx-auto my-auto flex max-w-6xl flex-col items-center justify-center px-4 py-12 md:px-8 md:py-18 h-full">
                 <motion.div
                     initial={{ y: 25, opacity: 0 }}
